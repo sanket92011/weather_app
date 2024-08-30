@@ -1,8 +1,7 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HourlyForecast extends StatelessWidget {
-  HourlyForecast({
+  const HourlyForecast({
     super.key,
     required this.time,
     required this.temperature,

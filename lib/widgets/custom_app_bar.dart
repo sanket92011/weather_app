@@ -8,12 +8,15 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       required this.isCenter,
       required this.onClick,
       required this.imagePath,
-      required this.icon});
+      required this.icon,
+      required this.onThemeButtonClicked});
 
   final Text title;
   final IconData icon;
   final bool useCustomIcon;
   bool isCenter = false;
+  final VoidCallback onThemeButtonClicked;
+
   final VoidCallback onClick;
   final String imagePath;
 
@@ -24,7 +27,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
             onPressed: onClick,
-            icon: useCustomIcon ? Image.asset(imagePath) : Icon(icon))
+            icon: useCustomIcon ? Image.asset(imagePath) : Icon(icon)),
       ],
     );
   }

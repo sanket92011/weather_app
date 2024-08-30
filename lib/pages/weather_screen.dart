@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:weather/secrets.dart';
 import 'package:weather/widgets/additional_info.dart';
 import 'package:weather/widgets/custom_app_bar.dart';
+import 'package:weather/widgets/custom_error.dart';
 import 'package:weather/widgets/hourly_forecast.dart';
 import 'package:http/http.dart' as http;
 
@@ -27,7 +28,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   Future<Map<String, dynamic>> getCurrentWeather() async {
     try {
-      String cityName = "Mahuva";
+      String cityName = "London";
       final res = await http.get(Uri.parse(
         "https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=$openWeatherAPIKey",
       ));
@@ -46,9 +47,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppbar(
-        title: const Text("    Weather App"),
+        onThemeButtonClicked: () {},
+        title: const Text(
+          "Weather App",
+        ),
         useCustomIcon: false,
-        isCenter: true,
+        isCenter: false,
         onClick: () {
           setState(() {});
         },
@@ -68,6 +72,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
               child: Text(
                 snapshot.error.toString(),
               ),
+            );
+          }
+          if (snapshot.error != null) {
+            return CustomError(
+              onclick: () {
+                setState(() {});
+              },
             );
           }
           final data = snapshot.data!;
