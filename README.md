@@ -1,11 +1,10 @@
- 
- 
-
 **Weather App**
 
 **Overview**
 
-Weather App is a Flutter application designed to provide real-time weather information using the OpenWeather API. Users can check the current weather and forecasts for various locations. The app features custom error handling to enhance user experience.
+Weather App is a Flutter application designed to provide real-time weather information using the
+OpenWeather API. Users can check the current weather and forecasts for various locations. The app
+features custom error handling to enhance user experience.
 
 **Features**
 
@@ -16,10 +15,10 @@ Weather App is a Flutter application designed to provide real-time weather infor
 **Screenshots**
 
 - **Home Screen**  
-  ![Home Screen](./screenshots/home_screen.png)
+  ![Home Screen](./screenshots/weather_screen.png)
 
 - **Weather Details**  
-  ![Weather Details](./screenshots/weather_details.png)
+  ![Error Screen](./screenshots/error.png)
 
 **Getting Started**
 
@@ -28,7 +27,9 @@ To set up and run the Weather App on your local machine, follow these steps:
 **1. Prerequisites**
 
 Ensure you have the following installed:
-- **Flutter**: Follow the [Flutter installation guide](https://flutter.dev/docs/get-started/install).
+
+- **Flutter**: Follow
+  the [Flutter installation guide](https://flutter.dev/docs/get-started/install).
 - **Dart**: Follow the [Dart installation guide](https://dart.dev/get-dart).
 
 **2. Clone the Repository**
@@ -52,7 +53,8 @@ flutter pub get
 
 1. Obtain an API key from [OpenWeather](https://openweathermap.org/api).
 2. Create a file named `secrets.dart` in the `lib` directory of your project.
-3. Add the following code to `lib/secrets.dart` and replace `'YOUR_API_KEY_HERE'` with your actual API key:
+3. Add the following code to `lib/secrets.dart` and replace `'YOUR_API_KEY_HERE'` with your actual
+   API key:
 
    ```dart
    const String openWeatherApiKey = 'YOUR_API_KEY_HERE';
@@ -68,7 +70,8 @@ flutter run
 
 **Custom Errors**
 
-The app includes custom error handling to manage various scenarios such as network issues or API errors, providing user-friendly error messages.
+The app includes custom error handling to manage various scenarios such as network issues or API
+errors, providing user-friendly error messages.
 
 **Contributing**
 
