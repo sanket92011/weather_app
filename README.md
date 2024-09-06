@@ -20,6 +20,9 @@ features custom error handling to enhance user experience.
 - **Weather Details**  
   ![Error Screen](./screenshots/error.png)
 
+- **Weather Details**  
+  ![Error Screen](./screenshots/cities.png)
+
 **Getting Started**
 
 To set up and run the Weather App on your local machine, follow these steps:
