@@ -1,0 +1,196 @@
+{
+  "cities": [
+    {
+      "name": "Ahmedabad",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Agra",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "name": "Amritsar",
+      "state": "Punjab"
+    },
+    {
+      "name": "Bhubaneswar",
+      "state": "Odisha"
+    },
+    {
+      "name": "Bilaspur",
+      "state": "Chhattisgarh"
+    },
+    {
+      "name": "Bhopal",
+      "state": "Madhya Pradesh"
+    },
+    {
+      "name": "Bikaner",
+      "state": "Rajasthan"
+    },
+    {
+      "name": "Chandigarh",
+      "state": "Chandigarh"
+    },
+    {
+      "name": "Chennai",
+      "state": "Tamil Nadu"
+    },
+    {
+      "name": "Coimbatore",
+      "state": "Tamil Nadu"
+    },
+    {
+      "name": "Durgapur",
+      "state": "West Bengal"
+    },
+    {
+      "name": "Dehradun",
+      "state": "Uttarakhand"
+    },
+    {
+      "name": "Delhi",
+      "state": "Delhi"
+    },
+    {
+      "name": "Faridabad",
+      "state": "Haryana"
+    },
+    {
+      "name": "Ghaziabad",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "name": "Guntur",
+      "state": "Andhra Pradesh"
+    },
+    {
+      "name": "Hyderabad",
+      "state": "Telangana"
+    },
+    {
+      "name": "Indore",
+      "state": "Madhya Pradesh"
+    },
+    {
+      "name": "Jabalpur",
+      "state": "Madhya Pradesh"
+    },
+    {
+      "name": "Jammu",
+      "state": "Jammu and Kashmir"
+    },
+    {
+      "name": "Jodhpur",
+      "state": "Rajasthan"
+    },
+    {
+      "name": "Jaipur",
+      "state": "Rajasthan"
+    },
+    {
+      "name": "Jamshedpur",
+      "state": "Jharkhand"
+    },
+    {
+      "name": "Kakinada",
+      "state": "Andhra Pradesh"
+    },
+    {
+      "name": "Kanpur",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "name": "Kalyan-Dombivli",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Kolkata",
+      "state": "West Bengal"
+    },
+    {
+      "name": "Mahuva",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Mumbai",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Mysuru",
+      "state": "Karnataka"
+    },
+    {
+      "name": "Nagpur",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Navi Mumbai",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Nashik",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Patna",
+      "state": "Bihar"
+    },
+    {
+      "name": "Pune",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Rajkot",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Rourkela",
+      "state": "Odisha"
+    },
+    {
+      "name": "Salem",
+      "state": "Tamil Nadu"
+    },
+    {
+      "name": "Shimla",
+      "state": "Himachal Pradesh"
+    },
+    {
+      "name": "Siliguri",
+      "state": "West Bengal"
+    },
+    {
+      "name": "Sonepat",
+      "state": "Haryana"
+    },
+    {
+      "name": "Surat",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Tiruchirappalli",
+      "state": "Tamil Nadu"
+    },
+    {
+      "name": "Tirupati",
+      "state": "Andhra Pradesh"
+    },
+    {
+      "name": "Trivandrum",
+      "state": "Kerala"
+    },
+    {
+      "name": "Udaipur",
+      "state": "Rajasthan"
+    },
+    {
+      "name": "Vadodara",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Visakhapatnam",
+      "state": "Andhra Pradesh"
+    }
+  ]
+}

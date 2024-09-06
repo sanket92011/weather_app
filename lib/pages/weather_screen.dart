@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:weather/pages/cities.dart';
 import 'package:weather/secrets.dart';
 import 'package:weather/widgets/additional_info.dart';
 import 'package:weather/widgets/custom_app_bar.dart';
@@ -9,15 +11,20 @@ import 'package:weather/widgets/custom_error.dart';
 import 'package:weather/widgets/hourly_forecast.dart';
 import 'package:http/http.dart' as http;
 
+dynamic temp = 0;
+String cityName = "London";
+bool showFahrenheit = false;
+
 class WeatherScreen extends StatefulWidget {
-  const WeatherScreen({super.key});
+  WeatherScreen({
+    super.key,
+  });
 
   @override
   State<WeatherScreen> createState() => _WeatherScreenState();
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-  double temp = 0;
   double pressure = 0;
 
   @override
@@ -28,12 +35,15 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   Future<Map<String, dynamic>> getCurrentWeather() async {
     try {
-      String cityName = "London";
+      cityName = selectedCity;
+      print(cityName);
       final res = await http.get(Uri.parse(
         "https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=$openWeatherAPIKey",
       ));
+
       final data = jsonDecode(res.body);
       if (data['cod'] != '200') {
+        print(data.length);
         throw "Error occurred";
       } else {
         return data;
@@ -58,6 +68,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
         },
         icon: Icons.refresh,
         imagePath: '',
+        showRefreshIndicator: true,
+        showGlobeIcon: true,
       ),
       body: FutureBuilder(
         future: getCurrentWeather(),
@@ -91,6 +103,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           final currentWindSpeed = currentWeatherData['wind']['speed'];
           final pressure = currentWeatherData['main']['pressure'];
           final humidity = currentWeatherData['main']['humidity'];
+          final weatherList = data['list'] as List<dynamic>;
 
           return Padding(
             padding: const EdgeInsets.all(16),
@@ -111,7 +124,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           child: Column(
                             children: [
                               Text(
-                                "${currentTemp.toStringAsFixed(1)}",
+                                "${currentTemp.toStringAsFixed(1)}°C",
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 32),
                               ),
@@ -129,7 +142,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               Text(
                                 "$description".toUpperCase(),
                                 style: const TextStyle(fontSize: 20),
-                              )
+                              ),
+                              Text(selectedCity),
                             ],
                           ),
                         ),
@@ -149,7 +163,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
                     itemBuilder: (context, index) {
-                      temp = data['list'][index + 1]['main']['temp'];
+                      temp = data['list'][index]['main']['temp'];
                       temp = temp - 273.15;
                       final formatedTemp = temp.toStringAsFixed(1);
                       final time =
@@ -190,7 +204,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       value: "$pressure",
                     ),
                   ],
-                )
+                ),
               ],
             ),
           );

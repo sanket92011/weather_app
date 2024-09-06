@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const WeatherScreen(),
+      home: WeatherScreen(),
       theme: ThemeData.dark(useMaterial3: true)
           .copyWith(appBarTheme: const AppBarTheme()),
       debugShowCheckedModeBanner: false,
